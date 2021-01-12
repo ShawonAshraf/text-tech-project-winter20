@@ -1,0 +1,26 @@
+<Tweets>
+	<Tweet ID='1'>
+		<created>2021-01-04T23:28:00</created>
+		<text>b'RT @CultureCrave: #Borat visits Night City \xf0\x9f\x98\x82\n\n\xf0\x9f\x8e\xa5 video_junkee | #CYBERPUNK2077 \nhttps://t.co/uF3TyfSjuR'</text>
+		<geo></geo>
+		<coordinates></coordinates>
+		<place></place>
+		<retweetcount>111</retweetcount>
+		<favoritecount>0</favoritecount>
+		<lang>en</lang>
+		<userlocation>New Jersey, USA</userlocation>
+		<userdescription>b'20 | Content Creator/Streamer | https://t.co/tSR8N7zkq0 | jklenkbusiness@gmail.com'</userdescription>
+	</Tweet>
+	<Tweet ID='2'>
+		<created>2021-01-04T23:28:00</created>
+		<text>b'RT @PlayCyberPunk: Marketing VS Reality #Cyberpunk2077 https://t.co/ppkawpSmgx'</text>
+		<geo></geo>
+		<coordinates></coordinates>
+		<place></place>
+		<retweetcount>633</retweetcount>
+		<favoritecount>0</favoritecount>
+		<lang>en</lang>
+		<userlocation></userlocation>
+		<userdescription>b'\xe2\x80\xa2the witcher\xe2\x80\xa2cyberpunk 2077\xe2\x80\xa2harry potter\xe2\x80\xa2 \xe2\x80\xa2folk rock\xe2\x80\xa2obserwacja polityczna\xe2\x80\xa2                        \n             follow to n i e poparcie'</userdescription>
+	</Tweet>
+</Tweets>
