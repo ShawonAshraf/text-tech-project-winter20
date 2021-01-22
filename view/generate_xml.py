@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+from view.utils import convert_to_xml_date_time
 
 
 # generates xml from a list of TweetData
@@ -10,7 +11,7 @@ def generate_xml_from_tweets_list(tweets):
 
         # add all properties
         created = ET.SubElement(tweet_element, "created")
-        created.text = tweet.created
+        created.text = convert_to_xml_date_time(tweet.created)
 
         text = ET.SubElement(tweet_element, "text")
         text.text = tweet.text
@@ -39,4 +40,11 @@ def generate_xml_from_tweets_list(tweets):
         user_description = ET.SubElement(tweet_element, "userdescription")
         user_description.text = tweet.user_description
 
-    return ET.tostring(root)
+    # generates a bytes string, convert to regular one
+    return ET.tostring(root).decode("utf-8")
+
+
+def write_xml_string_to_file(file_path, xml_str):
+    # file will be overwritten on every run
+    with open(file_path, "w") as f:
+        f.write(xml_str)
