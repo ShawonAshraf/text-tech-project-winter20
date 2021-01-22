@@ -53,7 +53,7 @@ class DataFactory(object):
         query = "select userlocation from TweetData"
         cursor = self.__run_query(query)
 
-        locations = [row for row in cursor]
+        locations = [row[0] for row in cursor if len(row[0]) != 0]
         return locations
 
     def get_all_texts(self):
