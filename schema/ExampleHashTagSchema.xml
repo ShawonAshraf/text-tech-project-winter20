@@ -1,0 +1,30 @@
+<HashTags>
+	<HashTag tag='#TMGT'>
+		<Tweet ID='29017'>
+			<created>2021-01-01T22:21:00</created>
+			<text>b"RT @RUN_E_DK: **** 2020! let's start the new year with a bang\xf0\x9f\x8e\x86\xf0\x9f\x8e\x89\n #TMGT #Cyberpunk2077 https://t.co/OCnahSvABK"</text>
+			<geo></geo>
+			<coordinates></coordinates>
+			<place></place>
+			<retweetcount>15</retweetcount>
+			<favoritecount>0</favoritecount>
+			<lang>b'en'</lang>
+			<userlocation>b'| L.S. |'</userlocation>
+			<userdescription>b'Member of @StMtGang | #GTAOnline | #RDOnline |'</userdescription>
+		</Tweet>
+	</HashTag>
+	<HashTag tag='#Cyberpunk2077'>
+		<Tweet ID='29017'>
+			<created>2021-01-01T22:21:00</created>
+			<text>b"RT @RUN_E_DK: **** 2020! let's start the new year with a bang\xf0\x9f\x8e\x86\xf0\x9f\x8e\x89\n #TMGT #Cyberpunk2077 https://t.co/OCnahSvABK"</text>
+			<geo></geo>
+			<coordinates></coordinates>
+			<place></place>
+			<retweetcount>15</retweetcount>
+			<favoritecount>0</favoritecount>
+			<lang>b'en'</lang>
+			<userlocation>b'| L.S. |'</userlocation>
+			<userdescription>b'Member of @StMtGang | #GTAOnline | #RDOnline |'</userdescription>
+		</Tweet>
+	</HashTag>
+</HashTags>
