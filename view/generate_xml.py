@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+import xml.dom.minidom as dom
 from view.utils import convert_to_xml_date_time
 
 
@@ -41,7 +42,10 @@ def generate_xml_from_tweets_list(tweets):
         user_description.text = tweet.user_description
 
     # generates a bytes string, convert to regular one
-    return ET.tostring(root).decode("utf-8")
+    xml_string = ET.tostring(root).decode("utf-8")
+    # return pretty printed xml
+    pretty_format = dom.parseString(xml_string)
+    return pretty_format.toprettyxml()
 
 
 def write_xml_string_to_file(file_path, xml_str):
