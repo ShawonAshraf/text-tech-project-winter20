@@ -48,12 +48,14 @@ def generate_xml_from_tweets_list(tweets):
     return pretty_format.toprettyxml()
 
 
-# takes in a list of hashtags and generates XML
-def generate_xml_for_hashtags(hashtags):
-    root = ET.Element("Hashtags")
-    for tag in hashtags:
-        child = ET.SubElement(root, "HashTag")
-        child.text = tag
+# takes in a list of locations/hashtags and generates XML
+# basically use this for generating xml for only one column of data
+# from the database
+def generate_xml_for_single_lists(data_list, parent_name, child_name):
+    root = ET.Element(parent_name)
+    for data in data_list:
+        child = ET.SubElement(root, child_name)
+        child.text = data
 
     # format and return xml string
     xml_string = ET.tostring(root).decode("utf-8")
