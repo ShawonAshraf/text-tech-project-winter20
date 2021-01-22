@@ -21,9 +21,9 @@ connection.close()
 
 xml = generate_xml_from_tweets_list(t)
 # write to file
-# default file directory is ./out
-write_xml_string_to_file("./out/top_10_rt.xml", str(xml))
+# default file directory is ./generated
+write_xml_string_to_file("generated/top_10_rt.xml", str(xml))
 
 # validate
-validation = validate_xml(xml_file_path="./out/top_10_rt.xml", schema_file_path=xml_schema_path)
+validation = validate_xml(xml_file_path="generated/top_10_rt.xml", schema_file_path=xml_schema_path)
 print(validation)
