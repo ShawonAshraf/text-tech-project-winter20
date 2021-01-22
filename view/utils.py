@@ -1,4 +1,5 @@
 import xmlschema
+from datetime import date, time
 
 
 def get_hashtag_from_text(text):
@@ -11,6 +12,30 @@ def get_hashtag_from_text(text):
             hashtags.add(s)
 
     return hashtags
+
+
+# convert tweet.created string to xml supported datetime
+def convert_to_xml_date_time(created):
+    # 2021/1/4 23:28
+    date_string, time_string = created.split()
+
+    # process date_string
+    year, month, day = date_string.split("/")
+
+    # process time_string
+    parts = time_string.split(":")
+
+    hour = int(parts[0])
+    minutes = int(parts[1])
+
+    if len(parts) == 2:
+        seconds = 0
+    else:
+        seconds = parts[2]
+
+    # merge into one string
+    formatted = f"{str(date(int(year), int(month), int(day)))}T{str(time(hour, minutes, seconds))}"
+    return formatted
 
 
 # validates xml against a schema
