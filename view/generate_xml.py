@@ -48,6 +48,19 @@ def generate_xml_from_tweets_list(tweets):
     return pretty_format.toprettyxml()
 
 
+# takes in a list of hashtags and generates XML
+def generate_xml_for_hashtags(hashtags):
+    root = ET.Element("Hashtags")
+    for tag in hashtags:
+        child = ET.SubElement(root, "HashTag")
+        child.text = tag
+
+    # format and return xml string
+    xml_string = ET.tostring(root).decode("utf-8")
+    pretty_format = dom.parseString(xml_string)
+    return pretty_format.toprettyxml()
+
+
 def write_xml_string_to_file(file_path, xml_str):
     # file will be overwritten on every run
     with open(file_path, "w") as f:
