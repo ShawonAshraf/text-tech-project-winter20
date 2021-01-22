@@ -25,5 +25,5 @@ xml = generate_xml_from_tweets_list(t)
 write_xml_string_to_file("./out/top_10_rt.xml", str(xml))
 
 # validate
-validation = validate_xml(xml_file_path="./out/id_1.xml", schema_file_path=xml_schema_path)
+validation = validate_xml(xml_file_path="./out/top_10_rt.xml", schema_file_path=xml_schema_path)
 print(validation)
