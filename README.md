@@ -34,7 +34,7 @@ __Always make sure to use the generated directory for storing generated xml file
 - `/db` : contains the sqlite database
 - `/generated` : contains the generated xml
 - `/view` : scripts for generating xml views
-
+- `/schema` : contains the schemas to validate generated xml
 
 ## TODO
 We need two more schemas
