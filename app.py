@@ -10,13 +10,14 @@ xml_schema_path = "./schema/TweetDataSchema.xsd"
 connection = sqlite3.connect(database_path)
 factory = DataFactory(connection)
 
-t = factory.get_all_user_locations()
+# t = factory.get_all_user_locations()
 # t = factory.get_tweet_by_id(1)
 # t = factory.get_tweets_by_hashtag("#Borat")
 # t = factory.get_all_texts()
 # t = factory.get_all_hashtags()
 # t = factory.rank_top_n_favorites(10)
 # t = factory.rank_top_n_rt(10)
+t = factory.get_all_tweets()
 connection.close()
 
 # xml = generate_xml_from_tweets_list(t)
@@ -33,6 +34,9 @@ connection.close()
 # write_xml_string_to_file("generated/list_hashtags.xml", xml)
 
 # generate xml for all locations
-xml = generate_xml_for_single_lists(t, "Locations", "Location")
-write_xml_string_to_file("generated/list_locations.xml", xml)
+# xml = generate_xml_for_single_lists(t, "Locations", "Location")
+# write_xml_string_to_file("generated/list_locations.xml", xml)
 
+# generate xml for all tweets
+xml = generate_xml_from_tweets_list(t)
+write_xml_string_to_file("generated/all_tweets.xml", xml)
