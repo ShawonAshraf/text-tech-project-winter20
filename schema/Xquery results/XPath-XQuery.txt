@@ -1,0 +1,83 @@
+/Tweets/Tweet[@ID="7880"]
+
+Getting the old data.................................
+/Tweets/Tweet[translate(created, "-:T", "") > translate("2020-12-30T00:00:00", "-:T", "")
+and translate(created, "-:T", "") < translate("2021-01-05T00:00:00", "-:T", "")]
+
+Getting the new data.................................
+/Tweets/Tweet[translate(created, "-:T", "") > translate("2021-01-21T00:00:00", "-:T", "")]
+
+
+XQUErY - Getting the old data.................................
+xquery version "3.0";
+for $t in /Tweets/Tweet[translate(created, "-:T", "") 
+> translate("2020-12-30T00:00:00", "-:T", "") and translate(created, "-:T", "") < translate("2021-01-05T00:00:00", "-:T", "")]
+let $x := xs:integer($t/retweetcount)
+order by $x descending, $t/created descending
+return <TweetAfterRelease>
+	{$t/retweetcount}
+    {$t/created}
+    {$t/text}
+	{$t/userlocation}
+    </TweetAfterRelease>
+
+
+XQUErY - Getting the new data.................................
+xquery version "3.0";
+for $t in /Tweets/Tweet[translate(created, "-:T", "") 
+> translate("2021-01-21T00:00:00", "-:T", "")]
+let $x := xs:integer($t/retweetcount)
+order by $x descending, $t/created descending
+return <TweetAfterRelease>
+	{$t/retweetcount}
+    {$t/created}
+    {$t/text}
+	{$t/userlocation}
+    </TweetAfterRelease>
+
+
+XQUErY - Getting old data grouped by the userlocation.................................
+xquery version "3.0";
+for $t in /Tweets/Tweet[translate(created, "-:T", "") 
+> translate("2020-12-30T00:00:00", "-:T", "") and translate(created, "-:T", "") < translate("2021-01-05T00:00:00", "-:T", "")]
+let $g := $t/userlocation 
+group by $g
+order by $g
+return <TweetAfterRelease userlocation="{$g}">
+	{for $i in $t
+    	let $x := xs:integer($i/retweetcount)
+        order by $x descending, $i/created descending
+    	return $i
+    }
+    </TweetAfterRelease>
+
+
+
+XQUErY - Getting new data grouped by the userlocation.................................
+xquery version "3.0";
+for $t in /Tweets/Tweet[translate(created, "-:T", "") 
+> translate("2021-01-21T00:00:00", "-:T", "")]
+let $g := $t/userlocation 
+group by $g
+order by $g
+return <TweetAfterRelease userlocation="{$g}">
+	{for $i in $t
+    	let $x := xs:integer($i/retweetcount)
+        order by $x descending, $i/created descending
+    	return $i
+    }
+    </TweetAfterRelease>
+
+
+XQUErY - Tweets grouped by Hashtags.................................
+xquery version "3.0";
+for $x in /Tweets/Tweet/tokenize(text,'#')[position() = (2 to 1000)]
+let $hashtag := tokenize($x, ' ')[position() = (1)]
+for $t in /Tweets/Tweet
+group by $hashtag
+return <HashTags tag="{$hashtag}">
+	{for $i in $t
+    where $i/contains(text,concat('#',$hashtag))
+    return $i
+    }
+    </HashTags>
