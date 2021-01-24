@@ -3,7 +3,7 @@ from view.db import DataFactory
 from view.generate_xml import generate_xml_from_tweets_list, write_xml_string_to_file, generate_xml_for_single_lists
 from view.utils import validate_xml
 
-database_path = "./db/my_data_new.db"
+database_path = "./db/my_data_merge.db"
 xml_schema_path = "./schema/TweetDataSchema.xsd"
 
 # open a connection to the database
@@ -39,4 +39,4 @@ connection.close()
 
 # generate xml for all tweets
 xml = generate_xml_from_tweets_list(t)
-write_xml_string_to_file("generated/all_tweets_new.xml", xml)
+write_xml_string_to_file("generated/all_tweets_merge.xml", xml)
