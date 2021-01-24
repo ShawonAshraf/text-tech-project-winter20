@@ -3,7 +3,7 @@ from view.db import DataFactory
 from view.generate_xml import generate_xml_from_tweets_list, write_xml_string_to_file, generate_xml_for_single_lists
 from view.utils import validate_xml
 
-database_path = "./db/my_data.db"
+database_path = "./db/my_data_new.db"
 xml_schema_path = "./schema/TweetDataSchema.xsd"
 
 # open a connection to the database
@@ -16,7 +16,7 @@ factory = DataFactory(connection)
 # t = factory.get_all_texts()
 # t = factory.get_all_hashtags()
 # t = factory.rank_top_n_favorites(10)
-# t = factory.rank_top_n_rt(10)
+#t = factory.rank_top_n_rt(10)
 t = factory.get_all_tweets()
 connection.close()
 
@@ -39,4 +39,4 @@ connection.close()
 
 # generate xml for all tweets
 xml = generate_xml_from_tweets_list(t)
-write_xml_string_to_file("generated/all_tweets.xml", xml)
+write_xml_string_to_file("generated/all_tweets_new.xml", xml)
