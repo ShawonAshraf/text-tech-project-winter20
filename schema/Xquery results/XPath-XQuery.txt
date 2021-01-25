@@ -9,7 +9,6 @@ Getting the new data.................................
 
 
 XQUErY - Getting the old data.................................
-xquery version "3.0";
 for $t in /Tweets/Tweet[translate(created, "-:T", "") 
 > translate("2020-12-30T00:00:00", "-:T", "") and translate(created, "-:T", "") < translate("2021-01-05T00:00:00", "-:T", "")]
 let $x := xs:integer($t/retweetcount)
@@ -23,7 +22,6 @@ return <TweetAfterRelease>
 
 
 XQUErY - Getting the new data.................................
-xquery version "3.0";
 for $t in /Tweets/Tweet[translate(created, "-:T", "") 
 > translate("2021-01-21T00:00:00", "-:T", "")]
 let $x := xs:integer($t/retweetcount)
@@ -37,7 +35,6 @@ return <TweetAfterRelease>
 
 
 XQUErY - Getting old data grouped by the userlocation.................................
-xquery version "3.0";
 for $t in /Tweets/Tweet[translate(created, "-:T", "") 
 > translate("2020-12-30T00:00:00", "-:T", "") and translate(created, "-:T", "") < translate("2021-01-05T00:00:00", "-:T", "")]
 let $g := $t/userlocation 
@@ -54,7 +51,6 @@ return <TweetAfterRelease userlocation="{$g}">
 
 
 XQUErY - Getting new data grouped by the userlocation.................................
-xquery version "3.0";
 for $t in /Tweets/Tweet[translate(created, "-:T", "") 
 > translate("2021-01-21T00:00:00", "-:T", "")]
 let $g := $t/userlocation 
@@ -70,7 +66,6 @@ return <TweetAfterRelease userlocation="{$g}">
 
 
 XQUErY - Tweets grouped by Hashtags.................................
-xquery version "3.0";
 for $x in /Tweets/Tweet/tokenize(text,'#')[position() = (2 to 1000)]
 let $hashtag := tokenize($x, ' ')[position() = (1)]
 for $t in /Tweets/Tweet
@@ -81,3 +76,9 @@ return <HashTags tag="{$hashtag}">
     return $i
     }
     </HashTags>
+
+
+XQUERY - Tweets that contains the word "bug"....................................
+for $t in /Tweets/Tweet[contains(lower-case(text), 'bug')]
+order by $t/retweetcount descending, $t/created descending
+return <BugTweets>{$t}</BugTweets>
