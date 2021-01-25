@@ -1,10 +1,11 @@
+XPATH - Getting Tweet Based on ID
 /Tweets/Tweet[@ID="7880"]
 
-Getting the old data.................................
+XPATH - Getting the old data.................................
 /Tweets/Tweet[translate(created, "-:T", "") > translate("2020-12-30T00:00:00", "-:T", "")
 and translate(created, "-:T", "") < translate("2021-01-05T00:00:00", "-:T", "")]
 
-Getting the new data.................................
+GXPATH - etting the new data.................................
 /Tweets/Tweet[translate(created, "-:T", "") > translate("2021-01-21T00:00:00", "-:T", "")]
 
 
