@@ -1,0 +1,3 @@
+for $t in /Tweets/Tweet[contains(lower-case(text), 'bug')]
+order by $t/retweetcount descending, $t/created descending
+return <BugTweets>{$t}</BugTweets>

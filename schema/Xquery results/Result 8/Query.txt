@@ -1,0 +1,2 @@
+let $c := count(/Tweets/Tweet[contains(lower-case(text), 'bug')])
+return <BugTweetsCount>{$c}</BugTweetsCount>

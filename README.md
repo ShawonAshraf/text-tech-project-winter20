@@ -36,8 +36,11 @@ __Always make sure to use the generated directory for storing generated xml file
 - `/view` : scripts for generating xml views
 - `/schema` : contains the schemas to validate generated xml
 
-## TODO
-We need two more schemas
+## XML Schemas (XSD)
+We have 5 different xml schemas that can be found in the /schema folder. They are:
 
-1. For showing all locations
-2. For showing all hashtags
+1. TweetDataSchema.xsd, a schema for defining the Tweets.
+2. HashTagSchema.xsd, a schema only for hashtags.
+3. HashTagSchemaWithTweet.xsd, a schema for hashtags with the Tweets under the hasgtag.
+4. LocationSchema.xsd, a schema only for user locations.
+5. LocationSchemaWithTweet.xsd, a schema for user locations with the Tweets under the user location.
