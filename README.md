@@ -36,6 +36,24 @@ __Always make sure to use the generated directory for storing generated xml file
 - `/view` : scripts for generating xml views
 - `/schema` : contains the schemas to validate generated xml
 
+## Data
+Tweets with hashtag #Cyberpunk2077 collected by twitter API and tweepy
+1. Retrieved features:
+   - created_at
+   - text
+   - user location
+   - user description
+   - geo
+   - coordinates
+   - place 
+   - retweet count
+   - favorite count
+   - lang
+2. Retrieved time periods and tweets number
+   - Jan 4th  39490
+   - Jan 24th  8177
+
+
 ## XML Schemas (XSD)
 We have 5 different xml schemas that can be found in the /schema folder. They are:
 
