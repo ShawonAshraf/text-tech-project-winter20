@@ -1,3 +1,4 @@
+(: This query returns the number of Tweets on each user location and order them :)
 for $x in /Tweets/Tweet
 let $l := $x/userlocation
 group by $l

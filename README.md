@@ -44,3 +44,7 @@ We have 5 different xml schemas that can be found in the /schema folder. They ar
 3. HashTagSchemaWithTweet.xsd, a schema for hashtags with the Tweets under the hasgtag.
 4. LocationSchema.xsd, a schema only for user locations.
 5. LocationSchemaWithTweet.xsd, a schema for user locations with the Tweets under the user location.
+
+## XQuery
+The folder /schema/XqueryResults contains 10 different Xquery methods that we have developed in order to query the xml file "all_tweets_merge.xml" which can be found in the /generated folder. The xml file was generated from the "TweetDataSchema.xsd" in the folder /schema.
+The /schema/XqueryResults folder contains both the xquery (xq) and the respective xml result. We used an application called BaseX to run the xquery methods.

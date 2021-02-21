@@ -1,3 +1,4 @@
+(: This query returns how much each HashTag has been mentioned :)
 for $groupedHashTags in (
   for $x in /Tweets/Tweet/tokenize(text,'#')[position() = (2 to 1000)]
   for $hashtag in tokenize($x, ' ')[position() = (1)]

@@ -1,3 +1,4 @@
+(: This query returns the Tweets grouped by the user location :)
 for $t in /Tweets/Tweet
 let $g := $t/userlocation 
 group by $g
