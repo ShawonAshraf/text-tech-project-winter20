@@ -10,6 +10,8 @@ xml_schema_path = "./schema/TweetDataSchema.xsd"
 connection = sqlite3.connect(database_path)
 factory = DataFactory(connection)
 
+"""Comment out the methods you'd like to use"""
+
 # t = factory.get_all_user_locations()
 # t = factory.get_tweet_by_id(1)
 # t = factory.get_tweets_by_hashtag("#Borat")
