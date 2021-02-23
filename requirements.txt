@@ -45,7 +45,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 diff-match-patch @ file:///tmp/build/80754af9/diff-match-patch_1594828741838/work
 distributed @ file:///opt/concourse/worker/volumes/live/1e6cde4d-2afc-4062-68e5-ab3b4b491e97/volume/distributed_1610822568801/work
-Django==1.11.3
+django>=1.11.29
 docutils==0.16
 entrypoints==0.3
 et-xmlfile==1.0.1
