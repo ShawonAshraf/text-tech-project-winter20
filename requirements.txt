@@ -91,7 +91,7 @@ jupyter==1.0.0
 jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1601311786391/work
 jupyter-console @ file:///tmp/build/80754af9/jupyter_console_1598884538475/work
 jupyter-core @ file:///opt/concourse/worker/volumes/live/35a93b4e-d6fb-4720-7895-2fda25ada785/volume/jupyter_core_1606149000225/work
-jupyterlab==2.2.6
+jupyterlab>=2.2.10
 jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
 jupyterlab-server @ file:///tmp/build/80754af9/jupyterlab_server_1594164409481/work
 jupyterlab-widgets @ file:///tmp/build/80754af9/jupyterlab_widgets_1609884341231/work
