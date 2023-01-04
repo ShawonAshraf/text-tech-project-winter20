@@ -224,7 +224,7 @@ traitlets==4.3.3
 tweepy==3.10.0
 typed-ast @ file:///opt/concourse/worker/volumes/live/85c87157-84ad-443c-5815-d7450a5595c1/volume/typed-ast_1610484564230/work
 typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1598376058250/work
-ujson==1.35
+ujson==5.4.0
 unicodecsv==0.14.1
 urllib3 @ file:///tmp/build/80754af9/urllib3_1606938623459/work
 virtualenv==16.7.5
